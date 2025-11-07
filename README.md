@@ -26,7 +26,8 @@ The full production implementations are proprietary and available exclusively fo
 
 For production-grade statistical arbitrage and advanced analytics:
 
-**Email**: `license@financial-intel.com`  
+**📧 Email**: `ayush108108@gmail.com`  
+**💬 GitHub Discussions**: [Open a discussion](../../discussions)  
 **Subject**: "Financial Intelligence Enterprise License"
 
 **Enterprise package includes:**
@@ -400,7 +401,7 @@ http://localhost:8000/redoc (ReDoc)
 - 🔒 Advanced backtesting with optimization
 - 🔒 Custom integration and training
 
-*Contact `license@financial-intel.com` to upgrade to enterprise.*
+*Contact ayush108108@gmail.com or [open a discussion](../../discussions) to request enterprise features.*
 
 ---
 
@@ -422,8 +423,9 @@ Quick wins:
 ## 📞 Support & Community
 
 - **GitHub Issues** — Bug reports and feature requests (open-source components)
-- **Discussions** — Q&A, ideas, best practices
-- **Enterprise Support** — Email `license@financial-intel.com` for SLA-backed 24/7 support
+- **[GitHub Discussions](../../discussions)** — Q&A, ideas, best practices, feature requests
+- **📧 Email** — ayush108108@gmail.com for general inquiries
+- **Enterprise Support** — Contact for 24/7 SLA-backed support
 
 ---
 
@@ -449,4 +451,4 @@ See [LICENSE](./LICENSE) for complete details.
 
 **Made with ❤️ for traders, researchers, and fintech builders.**
 
-[⭐ Star us on GitHub](https://github.com/ayush108108/financial-intel) | [📧 Enterprise](mailto:license@financial-intel.com) | [🔐 License](./LICENSE)
+[⭐ Star us on GitHub](https://github.com/ayush108108/financial-intel) | [📧 Email](mailto:ayush108108@gmail.com) | [💬 Discussions](../../discussions) | [🔐 License](./LICENSE)
