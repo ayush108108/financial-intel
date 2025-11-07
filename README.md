@@ -2,9 +2,42 @@
 
 > **Intelligent financial data pipeline with real-time pair trading analysis. Detect statistical arbitrage opportunities via cointegration testing and correlation-based pair screening.**
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-MIT%20%2B%20Proprietary-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.9+-green.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
+
+---
+
+## ⚠️ Proprietary Components Notice
+
+This repository contains **minimal demo versions** of certain high-value analytical components.
+The full production implementations are proprietary and available exclusively for enterprise customers.
+
+### Components with Proprietary Full Versions:
+
+| Component | Demo Status | Full Version Features |
+|-----------|------------|----------------------|
+| **Cointegration Engine** | ✅ Demo stub | Engle-Granger testing, Johansen method, ADF testing, mean-reversion detection, half-life computation, optimal hedging ratios |
+| **Correlation Analysis** | ✅ Demo stub | Multi-method analysis, rolling windows (20/60/252-day), hierarchical clustering, real-time screening, factor-adjusted correlations |
+| **Interactive Heatmap UI** | ✅ Basic table | D3.js/Plotly interactive visualization, zoom/pan/clustering display, real-time updates, correlation network graphs |
+| **Advanced Analytics** | ✅ Limited | Machine learning pair prediction, regime detection, risk assessment models, portfolio optimization |
+
+### Request Full Access
+
+For production-grade statistical arbitrage and advanced analytics:
+
+**Email**: `license@financial-intel.com`  
+**Subject**: "Financial Intelligence Enterprise License"
+
+**Enterprise package includes:**
+- Full source code for all proprietary components
+- Unlimited commercial usage rights
+- 24/7 priority support and updates
+- Custom integration training and consulting
+- Backtesting framework with advanced metrics
+- Real-time alert systems
+
+See [LICENSE](./LICENSE) for complete feature matrix and terms.
 
 ---
 
@@ -31,7 +64,7 @@ Perfect for **algorithmic traders**, **fintech platforms**, **portfolio managers
 | **Multi-Asset Support** | US stocks, ETFs, crypto (BTC, ETH), international markets (India NSE/BSE, Forex) |
 | **Daily & Intraday Data** | Daily EOD + 4-hour candles with 20-year historical depth |
 | **Correlation Matrix** | Fast Spearman/Pearson analysis across 100+ asset pairs daily |
-| **Cointegration Testing** | Statistical significance testing (Engle-Granger, 2-step OLS) |
+| **Cointegration Testing** | Statistical significance testing (demo version; full version includes Engle-Granger, Johansen, ADF) |
 | **Rolling Metrics** | 20-day, 60-day, 252-day windows for volatility, beta, Sharpe |
 | **Backtesting Engine** | Walk-forward analysis with configurable entry/exit rules |
 | **REST APIs** | Query pairs, backtest results, correlation matrices in milliseconds |
@@ -50,10 +83,11 @@ Perfect for **algorithmic traders**, **fintech platforms**, **portfolio managers
 │                                                               │
 │  Frontend (Vue 3 + Vite)     Backend (FastAPI + AsyncIO)   │
 │  ├─ Pair Screener             ├─ Data Ingestion Service    │
-│  ├─ Correlation Heatmap       ├─ Cointegration Engine      │
+│  ├─ Correlation Heatmap       ├─ Cointegration Engine*     │
 │  ├─ Backtest Results          ├─ Correlation Analysis      │
 │  └─ Real-time Metrics         └─ REST API                  │
 │                                                               │
+│  * Full version available with enterprise license            │
 │                      ↓                                        │
 │                                                               │
 │          PostgreSQL Database (Supabase)                      │
@@ -77,6 +111,8 @@ Tiers:
   Tier 2: Validation & QA      → Check data quality, freshness
   Tier 3: Correlation Analysis → Compute pair scores
   Tier 4: Cointegration Tests  → Statistical arbitrage signals
+  
+Note: Tier 4 in this repo is a demo. Full version available via enterprise license.
 ```
 
 ---
@@ -203,6 +239,9 @@ Tier 3D: Factor Exposure Analysis
     ↓
 Tier 4: Precomputation & Caching
 └─ Generate derived datasets for fast API queries
+
+* Tier 3B-4 functionality in this repo is demo only.
+  Full production version available with enterprise license.
 ```
 
 ---
@@ -243,8 +282,8 @@ financial-intel/
 │  ├─ api/
 │  │  ├─ services/             # Business logic
 │  │  │  ├─ pipeline_service.py
-│  │  │  ├─ correlation_service.py
-│  │  │  ├─ cointegration_service.py
+│  │  │  ├─ correlation_service.py (demo)
+│  │  │  ├─ cointegration_service.py (demo - full version proprietary)
 │  │  │  └─ data_writer_service.py
 │  │  └─ routers/              # REST endpoints
 │  ├─ clients/
@@ -253,19 +292,21 @@ financial-intel/
 ├─ frontend-v2/               # Vue 3 + Vite
 │  ├─ src/
 │  │  ├─ components/
+│  │  │  └─ CorrelationHeatmapDemo.vue (demo - full UI proprietary)
 │  │  ├─ views/
 │  │  └─ App.vue
 │  └─ vite.config.ts
 ├─ scripts/
 │  ├─ pipelines/
-│  │  ├─ daily_eod_pipeline.py      # Tier 1-2
-│  │  ├─ analytics_computation_pipeline_v2.py  # Tier 3
-│  │  └─ populate_precomputed.py    # Tier 4
+│  │  ├─ daily_eod_pipeline.py      # Tier 1-2 (public)
+│  │  ├─ analytics_computation_pipeline_v2.py  # Tier 3 (demo)
+│  │  └─ populate_precomputed.py    # Tier 4 (demo)
 │  └─ db/
 │     └─ schema.sql                  # Schema definition
 ├─ docker-compose.yml
 ├─ .github/workflows/
 │  └─ multi-tier-pipeline.yml       # CI/CD
+├─ LICENSE                          # MIT + Proprietary terms
 └─ README.md                         # You are here
 ```
 
@@ -299,6 +340,7 @@ http://localhost:8000/redoc (ReDoc)
 - **[Database Schema](./docs/SCHEMA.md)** — Full table definitions and relationships
 - **[Deployment Guide](./docs/DEPLOYMENT.md)** — AWS, Heroku, DigitalOcean, self-hosted
 - **[Contributing](./CONTRIBUTING.md)** — How to contribute and development workflow
+- **[LICENSE](./LICENSE)** — MIT + Proprietary components notice with complete feature matrix
 
 ---
 
@@ -317,64 +359,81 @@ http://localhost:8000/redoc (ReDoc)
 ### For Traders
 - Screen for pairs with high correlation and mean-reversion potential
 - Backtest strategies across decades of historical data
-- Real-time alerts when cointegration thresholds are crossed
+- Real-time alerts when cointegration thresholds are crossed (enterprise version)
 
 ### For Fintech Platforms
 - Embed pair-trading modules in your app
 - White-label the UI for your brand
 - Use the REST API to power your recommendation engine
+- Access advanced analytics via enterprise license
 
 ### For Portfolio Managers
 - Understand asset correlations across your holdings
 - Identify hedging opportunities
 - Analyze factor exposure and residual risk
+- Detect statistical arbitrage opportunities (enterprise version)
 
 ### For Researchers
 - Study statistical arbitrage across different markets
 - Benchmark cointegration methods
 - Publish academic papers on empirical pair trading
+- Access full research implementations (enterprise version)
 
 ---
 
 ## 🚦 Status & Roadmap
 
+### Open Source (MIT)
 - ✅ Data ingestion (stocks, ETFs, crypto, international)
-- ✅ Correlation analysis
-- ✅ Cointegration testing
+- ✅ Correlation analysis (Spearman/Pearson)
 - ✅ Rolling metrics & factor analysis
-- ✅ Backtesting engine
+- ✅ Backtesting engine (basic)
 - ✅ REST API with swagger docs
 - ✅ Docker & CI/CD
-- 🔜 Real-time WebSocket updates
-- 🔜 Machine learning pair prediction
-- 🔜 Risk alerts and notifications
-- 🔜 Interactive charting with TradingView
+
+### Enterprise (Proprietary License)
+- 🔒 Advanced cointegration testing (Engle-Granger, Johansen, ADF)
+- 🔒 Interactive correlation heatmap visualization
+- 🔒 Machine learning pair prediction
+- 🔒 Real-time WebSocket updates
+- 🔒 Risk alerts and notifications
+- 🔒 Advanced backtesting with optimization
+- 🔒 Custom integration and training
+
+*Contact `license@financial-intel.com` to upgrade to enterprise.*
 
 ---
 
 ## 💡 Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+We welcome contributions to the open-source components! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 Quick wins:
 - Add new asset classes or exchanges
-- Improve cointegration algorithms
-- Build analysis tools and dashboards
+- Improve data validation logic
+- Build additional analysis tools and dashboards
 - Optimize database queries
+- Improve documentation and examples
+
+**Note**: Proprietary components (cointegration engine, advanced heatmap UI) are not open for contributions at this time but are available via enterprise license.
 
 ---
 
 ## 📞 Support & Community
 
-- **GitHub Issues** — Bug reports and feature requests
+- **GitHub Issues** — Bug reports and feature requests (open-source components)
 - **Discussions** — Q&A, ideas, best practices
-- **Email** — ayush@example.com (replace with your contact)
+- **Enterprise Support** — Email `license@financial-intel.com` for SLA-backed 24/7 support
 
 ---
 
 ## 📄 License
 
-MIT License — See [LICENSE](./LICENSE) for details.
+Dual-licensed:
+- **Open Source Components**: MIT License
+- **Proprietary Components**: Custom Enterprise License (see [LICENSE](./LICENSE))
+
+See [LICENSE](./LICENSE) for complete details.
 
 ---
 
@@ -384,9 +443,10 @@ MIT License — See [LICENSE](./LICENSE) for details.
 - **Supabase** — PostgreSQL hosting and APIs
 - **FastAPI** — Modern Python web framework
 - **Vue.js** — Reactive frontend framework
+- **pandas & NumPy** — Data science foundations
 
 ---
 
 **Made with ❤️ for traders, researchers, and fintech builders.**
 
-[⭐ Star us on GitHub](https://github.com/ayush108108/financial-intel) | [📧 Contact](mailto:ayush@example.com) | [🔗 Live Demo](https://financial-intel-demo.com)
+[⭐ Star us on GitHub](https://github.com/ayush108108/financial-intel) | [📧 Enterprise](mailto:license@financial-intel.com) | [🔐 License](./LICENSE)
