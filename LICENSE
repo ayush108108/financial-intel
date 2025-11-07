@@ -22,7 +22,43 @@ SOFTWARE.
 
 ---
 
-## Additional Terms
+## ⚠️ PROPRIETARY COMPONENTS NOTICE
+
+This repository contains **minimal demo versions** of certain high-value components.
+The full production implementations are proprietary and available exclusively for
+enterprise customers.
+
+### Components with Proprietary Full Versions:
+
+1. **Cointegration Analysis Engine** (`backend/api/services/cointegration_service.py`)
+   - Full version includes: Engle-Granger testing, Johansen cointegration, ADF testing
+   - Features: Mean-reversion detection, half-life computation, optimal hedging
+   - Status: Demo version only in public repo
+
+2. **Correlation Analysis System** (`backend/api/services/correlation_service.py`)
+   - Full version includes: Multi-method analysis, rolling windows, clustering
+   - Features: Real-time pair screening, factor analysis, PCA decomposition
+   - Status: Demo version only in public repo
+
+3. **Interactive Heatmap UI** (`frontend-v2/src/components/CorrelationHeatmapDemo.vue`)
+   - Full version includes: D3.js/Plotly interactive visualization
+   - Features: Zoom/pan, real-time updates, clustering visualization, exports
+   - Status: Demo placeholder only in public repo
+
+### How to Access Proprietary Components:
+
+**Request access via email:**
+- **Email**: license@financial-intel.com
+- **Subject**: "Financial Intelligence Enterprise License Request"
+- **Include**: Your use case, company, and data requirements
+
+Enterprise customers receive:
+- Full source code for all components
+- Unlimited commercial usage rights
+- Priority support and updates
+- Custom training and integration
+
+### Additional Terms
 
 By using this software, you agree that:
 
@@ -36,7 +72,15 @@ By using this software, you agree that:
 3. **No Warranty**: The authors are not liable for any trading losses or damages arising from
    the use of this software.
 
-4. **Testing**: Always test strategies on historical data before deploying to live trading.
+4. **Proprietary Respect**: The minimal demo versions provided are for understanding the
+   platform architecture. Do not attempt to reverse-engineer or reproduce the proprietary
+   components.
+
+5. **Testing**: Always test strategies on historical data before deploying to live trading.
+
+6. **Commercial Use**: 
+   - Open-source version (MIT): Educational, research, personal use only
+   - Enterprise version: Full commercial rights (requires license agreement)
 
 ---
 
@@ -51,3 +95,24 @@ This software uses the following libraries (see requirements.txt for full list):
 - **Vue.js**: Licensed under MIT
 
 Please refer to their respective licenses for terms.
+
+---
+
+## Feature Availability Matrix
+
+| Feature | Open-Source | Enterprise |
+|---------|-------------|------------|
+| Data ingestion (yfinance) | ✅ | ✅ |
+| REST API framework | ✅ | ✅ |
+| Basic pair screening | ✅ | ✅ |
+| **Cointegration engine** | ❌ Demo | ✅ Full |
+| **Correlation heatmap** | ❌ Demo | ✅ Full |
+| **Interactive UI** | ❌ Stub | ✅ Full |
+| Statistical arbitrage | ❌ Demo | ✅ Full |
+| Real-time alerts | ❌ | ✅ |
+| Custom backtesting | ❌ | ✅ |
+| Priority support | ❌ | ✅ |
+
+---
+
+For licensing inquiries or to explore the full platform, contact: **license@financial-intel.com**
